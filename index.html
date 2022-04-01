@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div style="background-image: url(фон.png);height: 435px; width: 950px;">
+		<img src="1.png" style="margin-top: 135px;">
+			<div class="box" style="display: flex; background-image: url(7.png); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 100px; left: 350px;transition: 1s;"></div>
+			<div class="box1" style="display: flex; background-image: url(6.jpg); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 100px; left: 500px;transition: 1s;"></div>
+			<div class="box2" style="display: flex; background-image: url(3.jpg); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 100px; left: 650px;transition: 1s;"></div>
+			<div class="box3" style="display: flex; background-image: url(5.jpg); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 250px; left: 350px;transition: 1s;"></div>
+			<div class="box4" style="display: flex; background-image: url(8.jpg); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 250px; left: 500px;transition: 1s;"></div>
+			<div class="box5" style="display: flex; background-image: url(3.jpg); background-size: 100% 100%;height: 100px; width: 100px; position: absolute; top: 250px; left: 650px;transition: 1s;"></div>
+			<button type="button" class="butt" style="background-color: #982a2a;color:#390000;">Перемешать</button>
+			<p style="height:5px; color:#390000;">Помоги Сян Лин убрать вредителей :(!</p>
+			<h1 style="color:#390000;">sum: <span class="sum"></span></h1>
+	</div>
+	<script type="text/javascript">
+	let sum = 3
+	document.querySelector(".butt").onclick = function(){
+		document.querySelector(".box").style.background = "black"
+			document.querySelector(".box").style.left = "650px"
+		document.querySelector(".box1").style.background = "black"
+			document.querySelector(".box1").style.left = "350px"
+		document.querySelector(".box2").style.background = "black"
+			document.querySelector(".box2").style.left = "500px"
+			document.querySelector(".box2").style.top = "250px"
+		document.querySelector(".box3").style.background = "black"
+			document.querySelector(".box3").style.left = "650px"
+		document.querySelector(".box4").style.background = "black"
+			document.querySelector(".box4").style.left = "500px"
+			document.querySelector(".box4").style.top = "100px"
+		document.querySelector(".box5").style.background = "black"
+			document.querySelector(".box5").style.left = "350px"
+	}
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box").onclick = function(){
+			document.querySelector(".box").style.backgroundImage = 'url(7.png)'
+			document.querySelector(".box").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+		}		
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box1").onclick = function(){
+			document.querySelector(".box1").style.backgroundImage = 'url(3.jpg)'
+			document.querySelector(".box1").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+		}	
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box2").onclick = function(){
+			document.querySelector(".box2").style.backgroundImage = 'url(6.jpg)'
+			document.querySelector(".box2").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+		}
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box3").onclick = function(){
+			document.querySelector(".box3").style.backgroundImage = 'url(5.jpg)'
+			document.querySelector(".box3").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+		}
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box4").onclick = function(){
+			document.querySelector(".box4").style.backgroundImage = 'url(8.jpg)'
+			document.querySelector(".box4").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+		}
+		document.querySelector(".sum").innerHTML = sum;
+		document.querySelector(".box5").onclick = function(){
+			document.querySelector(".box5").style.backgroundImage = 'url(3.jpg)'
+			document.querySelector(".box5").style.backgroundSize = '100% 100%'
+				sum = sum - 1;
+				document.querySelector(".sum").innerHTML = sum;
+			if (sum == 0) {
+				document.querySelector(".text").style.display = "none"
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box").style.display = "none"
+				
+			}
+		}		
+	</script>
+</body>
+</html>
